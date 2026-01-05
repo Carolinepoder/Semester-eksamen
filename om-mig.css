@@ -3,7 +3,8 @@
   color: var(--color-text2);
 
   text-align: center;
-  padding: 5rem 1rem;
+  padding: 3rem 1rem;
+  font-size: 3rem;
 }
 
 main {

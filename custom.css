@@ -20,8 +20,8 @@
   --font-h2: "Inria Serif", serif;
 
   /* overskrift størrelse  */
-  --font-h1-size: 1rem;
-  --font-h2-size: 1rem;
+  --font-h1-size: 3rem;
+  --font-h2-size: 3rem;
   --font-h3-size: 1rem;
 
   /* tekst størrelser  */
@@ -42,6 +42,7 @@ body {
 
 h1 {
   font-family: var(--font-heading);
+  font-size: var(--font-h1-size);
 }
 
 h2,
