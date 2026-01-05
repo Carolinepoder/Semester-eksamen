@@ -1,18 +1,23 @@
 :root {
   /* baggrunds farver 1 og 2  */
-  --color-bg: (#302e2c);
-  --color-bg2: (#fff8ee);
+  --color-bg: #302e2c;
+  --color-bg2: #fff8ee;
 
   /* header farve */
-  --color-head-bg: (#302e2c);
+  --color-head-bg: #302e2c;
 
   /* Tekst farver */
-  --color-text: (#1d1d1d);
-  --color-text2: (#fcfcfc);
+  --color-text: #1d1d1d;
+  --color-text2: #fcfcfc;
 
   /* knapper */
-  --color-btn: (#ff7fec);
-  --color-btn-hover: (#bc57ad);
+  --color-btn: #ff7fec;
+  --color-btn-hover: #bc57ad;
+
+  /* font families */
+  --font-heading: "Gravitas One", serif;
+  --font-body: "PT Sans", sans-serif;
+  --font-h2: "Inria Serif", serif;
 
   /* overskrift størrelse  */
   --font-h1-size: 1rem;
@@ -25,10 +30,24 @@
   --headline2-size: 1rem;
   --headline3-size: 1rem;
   --bodytext-size: 1rem;
-  /* --cta-text-size: 1rem;
-  --followup-text-size: 1rem;
-  --form-submit-size: 1rem; */
 
   /*  Marginer */
   --margin-head-bottom: 5px;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+}
+
+h1 {
+  font-family: var(--font-heading);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-h2);
 }

@@ -1,0 +1,49 @@
+.temahero {
+  background-color: var(--color-bg);
+  color: var(--color-text2);
+
+  text-align: center;
+  padding: 5rem 1rem;
+}
+
+main {
+  background-color: var(--color-bg);
+
+  padding: 5rem;
+  align-items: center;
+}
+
+.b2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  font-size: 1.5rem;
+
+  background-color: #fdf8ee;
+  padding: 4rem;
+}
+
+.b2 img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+}
+
+.b1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+
+  background-color: var(--color-bg);
+  color: var(--color-text2);
+  padding: 4rem;
+  font-size: 1.5rem;
+}
+
+.b1 img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+}
