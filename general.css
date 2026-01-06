@@ -18,11 +18,13 @@ header {
   align-items: center;
 
   padding: 1.5rem 2rem;
-  background-color: #2f2e2c;
+  background-color: var(--color-bg);
 
   background-color: var(--color-bg);
   border-bottom: solid 1rem var(--color-btn);
 }
+
+/* main */
 
 .temahero {
   background-color: var(--color-bg);
@@ -33,7 +35,10 @@ header {
   font-size: 3rem;
 }
 
+/* Css til alle 4 tema sider + forside */
+
 main {
+  display: grid;
   background-color: var(--color-bg);
   color: var(--color-text2);
   padding: 5rem;
@@ -43,24 +48,52 @@ main {
 .b1 {
   background-color: var(--color-bg);
   color: var(--color-text2);
-  padding: 5rem;
   font-size: 1.5rem;
-  grid-template-columns: 1fr 1fr;
-}
-
-.b2 {
-  background-color: var(--color-bg2);
-  color: var(--color-text);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   align-items: start;
   padding: 5rem;
+}
+
+/* Section hvor der er knapper og små opgaver - alt skal være i en column */
+.b1-1 {
+  background-color: var(--color-bg);
+  color: var(--color-text2);
   font-size: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+  padding: 5rem;
+}
+/* her stopper den */
+
+.b1 img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+}
+
+.b2 {
+  background-color: var(--color-bg2);
+  color: var(--color-text);
+  font-size: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  padding: 5rem;
+}
+
+.b2 img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
 }
 
 h1 {
-  font-family: "Gravitas One", serif;
+  font-family: var(--font-heading);
   font-size: 3rem;
 }
 
@@ -80,8 +113,8 @@ main > h2 {
 }
 
 .menu a {
-  font-family: "PT Sans", sans-serif;
-  color: #fff;
+  font-family: var(--font-body);
+  color: var(--color-text2);
   text-decoration: none;
   font-size: 1rem;
 }
@@ -91,9 +124,9 @@ main > h2 {
 }
 
 .logo {
-  font-family: "Gravitas One", serif;
+  font-family: var(--font-heading);
   font-size: 2.5rem;
-  color: #fff;
+  color: var(--color-text2);
 }
 .burger {
   display: none;
@@ -106,13 +139,8 @@ main > h2 {
   display: block;
   width: 25px;
   height: 2px;
-  background-color: #fff;
+  background-color: var(--color-bg2);
   margin: 6px 0;
-}
-
-/* main */
-.a {
-  color: var(--color-btn);
 }
 
 .button {
@@ -127,7 +155,7 @@ main > h2 {
   align-items: center;
   justify-content: center;
 
-  font-family: "Inria Serif", serif;
+  font-family: var(--font-h2);
   font-size: 1rem;
   color: var(--color-text2);
   text-decoration: none;
@@ -162,60 +190,51 @@ footer {
 }
 
 @media (max-width: 768px) {
-  header {
-    padding: 1rem;
-  }
-  .logo {
-    font-size: 1.75rem;
+  main {
+    padding: 2rem 1.5rem;
   }
 
-  main,
   .b1,
-  .b2 {
-    padding: 2rem;
+  .b2,
+  .b1-1 {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.5rem;
   }
-  .temahero {
-    padding: 2rem 1rem;
-    font-size: 1.75rem;
+
+  .grid1-3 {
+    grid-template-columns: 1fr;
   }
+
+  .tema-grid {
+    grid-template-columns: 1fr;
+  }
+
   h1 {
     font-size: 2rem;
   }
+
   main > h2 {
     font-size: 1.5rem;
   }
 
-  .b1,
-  .b2 {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  .b1 img,
+  .b2 img {
+    max-width: 100%;
   }
-  .tema-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  .grid1-3 {
-    grid-template-columns: 1fr 1fr;
-  }
-  .grid1-3 img:nth-child(3) {
-    grid-column: 1 / -1;
-  }
-
   .menu {
     display: none;
-    position: absolute;
-    top: 72px;
-    right: 1rem;
   }
+
   .menu.active {
     display: flex;
-    flex-direction: column;
   }
+
   .burger {
     display: block;
   }
-  .button {
-    min-height: 40px;
-    padding: 0.5rem 1rem;
+
+  footer {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.5rem;
   }
 }
